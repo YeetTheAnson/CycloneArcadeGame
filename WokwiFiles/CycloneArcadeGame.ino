@@ -109,8 +109,8 @@ void playGame() {
 
 void handleButtonPress() {
   buttonPressed = false;
-  if (currentLed == 33 && isCurrentSessionRigged) {
-    currentLed = random(2) == 0 ? 32 : 34;
+  if (currentLed == 30 && isCurrentSessionRigged) {
+    currentLed = random(2) == 0 ? 29 : 31;
     strip.clear();
     strip.setPixelColor(currentLed, strip.Color(255, 0, 0));
     strip.show();
