@@ -68,8 +68,16 @@
       "type": "board-ssd1306",
       "id": "oled1",
       "top": 310.34,
-      "left": 509.03,
+      "left": 537.83,
       "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 315.5, "left": 412.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 343.4,
+      "left": 499.2,
+      "attrs": { "color": "green", "bounce": "0" }
     }
   ],
   "connections": [
@@ -222,10 +230,10 @@
     [ "rgb30:VDD", "esp:5V", "green", [ "h0", "v-76.8", "h57.6" ] ],
     [ "rgb29:VDD", "esp:5V", "green", [ "h9.6", "v-268.8", "h19.2" ] ],
     [ "rgb28:VDD", "esp:5V", "green", [ "h0", "v-96" ] ],
-    [ "rgb36:VDD", "esp:5V", "green", [ "h9.6", "v-297.6", "h-38.4" ] ],
-    [ "rgb35:VDD", "esp:5V", "green", [ "h-9.6", "v-297.6", "h-48" ] ],
-    [ "rgb34:VDD", "esp:5V", "green", [ "h-9.6", "v-307.2", "h-76.8" ] ],
-    [ "rgb33:VDD", "esp:5V", "green", [ "h-9.6", "v-307.2", "h-105.6" ] ],
+    [ "rgb36:VDD", "esp:5V", "green", [ "h-19.2", "v-297.6", "h-9.75" ] ],
+    [ "rgb35:VDD", "esp:5V", "green", [ "h-38.4", "v-297.6", "h-19.35" ] ],
+    [ "rgb34:VDD", "esp:5V", "green", [ "v-57.6", "h-86.55" ] ],
+    [ "rgb33:VDD", "esp:5V", "green", [ "v-153.6", "h-115.35" ] ],
     [ "rgb32:VDD", "esp:5V", "green", [ "h-9.6", "v-115.2", "h-134.4" ] ],
     [ "rgb31:DOUT", "rgb42:DIN", "green", [ "h0", "v-39.3", "h48" ] ],
     [ "rgb31:VDD", "esp:5V", "green", [ "h0", "v-115.2", "h-172.8" ] ],
@@ -258,7 +266,12 @@
     [ "oled1:GND", "esp:GND.2", "black", [ "v-288", "h-19.2" ] ],
     [ "oled1:VCC", "esp:5V", "red", [ "v-76.8", "h-172.65" ] ],
     [ "oled1:SCL", "esp:16", "green", [ "v0" ] ],
-    [ "oled1:SDA", "esp:17", "green", [ "v-182.4", "h0.07" ] ]
+    [ "oled1:SDA", "esp:17", "green", [ "v-182.4", "h0.07" ] ],
+    [ "pot1:GND", "btn1:2.l", "black", [ "v19.2", "h57.6" ] ],
+    [ "btn1:2.r", "oled1:GND", "green", [ "h10.4", "v-57.2" ] ],
+    [ "pot1:VCC", "oled1:VCC", "red", [ "v-9.6", "h76", "v-57.6" ] ],
+    [ "pot1:SIG", "esp:4", "green", [ "v19.2", "h-86.8", "v-172.8", "h134.4", "v-76.8" ] ],
+    [ "btn1:1.l", "esp:2", "green", [ "h38.4", "v-172.8" ] ]
   ],
   "dependencies": {}
 }
