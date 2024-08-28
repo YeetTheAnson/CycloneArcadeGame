@@ -31,7 +31,7 @@ Watch the demo video below
 
 ## How to flash binary
 
-1. Type ```https://github.com/espressif/esptool``` into CMD
+1. Type ```git clone https://github.com/espressif/esptool``` into CMD
 2. Navigate to the correct folder with ```cd esptool```
 3. Type ```git clone https://github.com/YeetTheAnson/CycloneArcadeGame```  into CMD
 4. Type ```esptool.py --chip esp32 erase_flash``` to erase flash
